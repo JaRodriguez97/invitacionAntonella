@@ -7,6 +7,12 @@ section {
   align-items: center;
 }
 
+section img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
 section h3 {
   font-size: 2rem;
   text-align: center;

@@ -9,8 +9,9 @@ import { PublicService } from '@services/public/public.service';
 })
 export class InicioComponent implements OnInit {
   constructor(public route: Router, public publicService: PublicService) {}
+
   ngOnInit(): void {
-    this.publicService.setAutoplay(true);
+    if (!this.publicService.isPlaying()) this.publicService.playAudio();
 
     setTimeout(() => this.route.navigate(['marco']), 10000);
   }
