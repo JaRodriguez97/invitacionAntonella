@@ -26,15 +26,16 @@ section img {
 
 section h3 {
   font-size: 3em;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  text-align: right;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
   display: flex;
   flex-direction: column;
   text-wrap: pretty;
   width: 100%;
-  padding: 40px;
+  padding: 20px 40px;
   background: linear-gradient(-45deg, #01befe, transparent);
-  max-height: 50svh;
+  max-height: 40svh;
+  line-height: 1.2em;
 }
 
 section h3 span {
@@ -51,5 +52,19 @@ section a {
   font-size: 3rem;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  section h3 span {
+    font-size: 1.5em;
+  }
+
+  section a {
+    font-size: 2rem;
+  }
 }

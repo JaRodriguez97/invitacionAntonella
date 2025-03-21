@@ -40,6 +40,7 @@ header .marco {
   object-fit: contain;
   border-radius: 20px;
   animation: to-down 1s linear both;
+  z-index: 5;
 }
 
 @keyframes to-down {
@@ -111,22 +112,36 @@ main .datosInfo {
   flex-direction: column-reverse;
   height: 50vh;
   width: 75vw;
-  justify-content: space-between;
+  justify-content:baseline;
   align-items: flex-end;
   text-align: right;
+  z-index: 3;
 }
 
 main .datosInfo address {
   font-size: 1.88em;
   display: flex;
   flex-direction: column;
+  line-height: 1.5em;
+}
+
+@media (max-width: 416px) {
+  main .datosInfo address {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 377px) {
+  main .datosInfo address {
+    font-size: 1.6em;
+  }
 }
 
 main .datosInfo address p {
   width: 120%;
   text-align: left;
   margin-left: -10vw;
-  z-index: 3;
+  text-shadow: 0 5px 5px #000;
 }
 
 main .datosInfo address span {
@@ -137,18 +152,17 @@ main .datosInfo address span {
 main .caballito2 {
   width: 200px;
   height: 200px;
-  animation: to-scape 1s linear both 5s;
+  animation: to-scape 1s linear both 10s;
   z-index: 4;
 }
 
 @keyframes to-scape {
   0% {
-    opacity: 0;
-    transform: scale(0);
+    transform: translateY(0);
   }
   100% {
-    opacity: 1;
-    transform: scale(1);
+    position: absolute;
+    transform: translateY(-100svh);
   }
 }
 
