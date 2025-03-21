@@ -9,14 +9,21 @@ section.container {
 
 header .anto {
   position: absolute;
-  width: 250px;
-  height: 260px;
+  max-width: 250px;
+  max-height: 260px;
+  min-width: 220px;
+  width: 50vw;
   object-fit: cover;
   top: 10px;
   left: 0;
-  right: 150px;
-  margin-inline: auto;
+  right: 100px;
   animation: opacity 2s linear both 1s;
+}
+
+@media (max-width: 365px) {
+  header .anto {
+    min-width: 200px;
+  }
 }
 
 @keyframes opacity {
@@ -33,7 +40,7 @@ header .marco {
   top: 0;
   left: 0;
   right: 0;
-  margin-inline: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -112,10 +119,11 @@ main .datosInfo {
   flex-direction: column-reverse;
   height: 50vh;
   width: 75vw;
-  justify-content:baseline;
+  justify-content: right;
   align-items: flex-end;
   text-align: right;
   z-index: 3;
+  padding-right: 10px;
 }
 
 main .datosInfo address {
@@ -125,15 +133,21 @@ main .datosInfo address {
   line-height: 1.5em;
 }
 
-@media (max-width: 416px) {
+@media (max-width: 500px) {
   main .datosInfo address {
     font-size: 1.7em;
   }
 }
 
-@media (max-width: 377px) {
+@media (max-width: 390px) {
   main .datosInfo address {
-    font-size: 1.6em;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 350px) {
+  main .datosInfo address {
+    font-size: 1.3em;
   }
 }
 
@@ -167,6 +181,6 @@ main .caballito2 {
 }
 
 footer {
-  bottom: -15px;
+  bottom: 0;
   animation: none;
 }
