@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PublicService } from '@services/public/public.service';
 
 @Component({
@@ -10,4 +10,10 @@ export class AppComponent {
   title = 'invitacionAntonella';
 
   constructor(public publicService: PublicService) {}
+
+  @HostListener('document:visibilitychange', ['$event'])
+  onVisibilityChange() {
+    if (document.hidden) this.publicService.pauseAudio();
+    else this.publicService.playAudio();
+  }
 }
