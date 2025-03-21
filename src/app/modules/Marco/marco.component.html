@@ -19,9 +19,17 @@
       class="caballito2"
     />
     <h2>
-      <span>Antonella</span> y su familia desean tu compañía en este hermoso
-      evento
+      <span>Antonella</span><br />
+      Nuestra hermosa <strong>Sirenita</strong>
     </h2>
     <img src="../../../assets/img/ariel/ariel1.png" alt="" class="ariel" />
   </main>
+
+  <footer>
+    <img
+      *ngFor="let i of [1, 2, 3, 4, 5].reverse()"
+      [src]="'../../../assets/img/fondo/algas' + i + '.png'"
+      alt="algas"
+    />
+  </footer>
 </section>

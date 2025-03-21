@@ -12,8 +12,10 @@ header .anto {
   width: 250px;
   height: 260px;
   object-fit: cover;
-  top: 30px;
+  top: 10px;
   left: 0;
+  right: 150px;
+  margin-inline: auto;
   animation: opacity 2s linear both 1s;
 }
 
@@ -28,10 +30,12 @@ header .anto {
 
 header .marco {
   position: absolute;
-  top: 20svh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
   width: 100%;
+  max-width: 400px;
   height: auto;
   object-fit: contain;
   border-radius: 20px;
@@ -41,30 +45,71 @@ header .marco {
 @keyframes to-down {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) translateY(-50svh);
+    transform: translateY(-50svh);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%) translateY(0);
+    transform: translateY(0);
   }
 }
 
 main h2 {
   position: absolute;
   top: 35svh;
-  left: 23vw;
-  text-align: left;
+  right: 20px;
+  text-align: right;
   font-size: 50px;
   width: 80%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  animation: to-left 1s linear both 1s;
+}
+
+@keyframes to-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+main h2 span {
+  font-size: 80px;
 }
 
 main img.ariel {
   position: absolute;
-  bottom: 0;
-  left: 50vw;
-  transform: translate(-20%, 0%);
+  top: 40svh;
+  left: -140px;
   width: 250px;
   height: 250px;
   object-fit: cover;
+  animation: to-up 1s linear both 1.5s;
+}
+
+@keyframes to-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50svh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main .caballito2 {
+  right: -30px;
+  position: absolute;
+  bottom: -30px;
+  animation: to-left 1.5s linear both 1s;
+}
+
+
+
+footer {
+  bottom: -15px;
+  animation: none;
 }
