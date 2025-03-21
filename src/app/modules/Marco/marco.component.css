@@ -83,11 +83,12 @@ main h2 span {
 main img.ariel {
   position: absolute;
   top: 40svh;
-  left: -140px;
+  right: 75vw;
   width: 250px;
   height: 250px;
   object-fit: cover;
   animation: to-up 1s linear both 1.5s;
+  z-index: 5;
 }
 
 @keyframes to-up {
@@ -105,7 +106,7 @@ main .datosInfo {
   animation: to-left 1s linear both 5s;
   right: 10px;
   position: absolute;
-  bottom: 50px;
+  bottom: 10svh;
   display: flex;
   flex-direction: column-reverse;
   height: 50vh;
@@ -121,9 +122,34 @@ main .datosInfo address {
   flex-direction: column;
 }
 
+main .datosInfo address p {
+  width: 120%;
+  text-align: left;
+  margin-left: -10vw;
+  z-index: 3;
+}
+
+main .datosInfo address span {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
 main .caballito2 {
   width: 200px;
   height: 200px;
+  animation: to-scape 1s linear both 5s;
+  z-index: 4;
+}
+
+@keyframes to-scape {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 footer {

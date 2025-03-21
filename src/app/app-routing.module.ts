@@ -19,6 +19,13 @@ const routes: Routes = [
       import('./modules/Marco/marco.module').then((m) => m.MarcoModule),
   },
   {
+    path: 'confirmacion',
+    loadChildren: () =>
+      import('./modules/confirmacion/confirmacion.module').then(
+        (m) => m.ConfirmacionModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

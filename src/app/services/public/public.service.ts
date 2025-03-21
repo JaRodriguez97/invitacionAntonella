@@ -14,7 +14,6 @@ export class PublicService {
     if (isPlatformBrowser(this.platformId)) {
       this.audio = new Audio();
       this.audio.src = '../assets/audio.mpeg';
-      this.audio.loop = true; // Para que el audio no se detenga
       this.audio.volume = 0.5;
     }
   }
