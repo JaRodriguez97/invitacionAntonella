@@ -18,3 +18,134 @@ header {
   width: 100%;
   padding: 0 10px;
 }
+
+header img {
+  animation: to-down 1s linear both 500ms;
+}
+
+@keyframes to-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50svh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header h2 {
+  animation: blur 10s linear both 500ms;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes blur {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  10% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  90% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
+
+main .sebastian {
+  animation: slide-left-rotate 1s linear both 3.5s;
+  z-index: 5;
+  position: relative;
+  width: 50%;
+}
+
+@keyframes slide-left-rotate {
+  0% {
+    opacity: 0;
+    transform: translateX(-80vw) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+main .flounder {
+  animation: slide-right-rotate 1s linear both 2s;
+  z-index: 5;
+  position: relative;
+  width: 50%;
+}
+
+@keyframes slide-right-rotate {
+  0% {
+    opacity: 0;
+    transform: translateX(80vw) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(-360deg);
+  }
+}
+
+main .confirmacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 2em;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 35svh;
+  animation: to-top 1s linear both 10s;
+  z-index: 10;
+  gap: 5px;
+}
+
+@keyframes to-top {
+  0% {
+    opacity: 0;
+    transform: translateY(100svh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main .confirmacion .mapa {
+  text-decoration: underline;
+  color: #000;
+  font-weight: bolder;
+  text-shadow: 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+main .confirmacion address {
+  display: flex;
+  flex-direction: column;
+}
+
+main .confirmacion address section {
+  line-height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .confirmacion address section span {
+  font-size: 2em;
+  font-style: normal;
+}
+
+main .confirmacion address section strong {
+  font-size: 1em;
+  width: 30%;
+  line-height: 1em;
+}
