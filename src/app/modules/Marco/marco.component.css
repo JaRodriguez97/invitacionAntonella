@@ -14,7 +14,16 @@ header .anto {
   object-fit: cover;
   top: 30px;
   left: 0;
-  /* animation: slide-bottom 1s linear both; */
+  animation: opacity 2s linear both 1s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 header .marco {
@@ -26,16 +35,27 @@ header .marco {
   height: auto;
   object-fit: contain;
   border-radius: 20px;
+  animation: to-down 1s linear both;
+}
+
+@keyframes to-down {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-50svh);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
 }
 
 main h2 {
   position: absolute;
-  top: 50svh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 35svh;
+  left: 23vw;
+  text-align: left;
   font-size: 50px;
-  width: 90%;
+  width: 80%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
