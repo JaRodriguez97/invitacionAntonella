@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PublicService } from '@services/public/public.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,8 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-  constructor(public route: Router) {}
+  constructor(public route: Router, public publicService: PublicService) {}
   ngOnInit(): void {
+    this.publicService.setAutoplay(true);
+
     setTimeout(() => this.route.navigate(['marco']), 10000);
   }
 }

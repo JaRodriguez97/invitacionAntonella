@@ -62,6 +62,7 @@ main h2 {
   width: 80%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   animation: to-left 1s linear both 1s;
+  transition: all 0.3s ease-in-out;
 }
 
 @keyframes to-left {
@@ -100,14 +101,30 @@ main img.ariel {
   }
 }
 
-main .caballito2 {
-  right: -30px;
+main .datosInfo {
+  animation: to-left 1s linear both 5s;
+  right: 10px;
   position: absolute;
-  bottom: -30px;
-  animation: to-left 1.5s linear both 1s;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 50vh;
+  width: 75vw;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
 }
 
+main .datosInfo address {
+  font-size: 1.88em;
+  display: flex;
+  flex-direction: column;
+}
 
+main .caballito2 {
+  width: 200px;
+  height: 200px;
+}
 
 footer {
   bottom: -15px;

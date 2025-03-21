@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { PublicService } from '@services/public/public.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'invitacionAntonella';
+
+  constructor(public publicService: PublicService) {}
 }
