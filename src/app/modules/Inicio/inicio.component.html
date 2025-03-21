@@ -1,0 +1,23 @@
+<div class="shadow-background"></div>
+<section class="container">
+  <header>
+    <h1>EL FONDO DEL MAR ESTÁ DE FIESTA</h1>
+  </header>
+
+  <main>
+    <img src="../../../assets/img/ariel/ariel2.png" alt="ariel2" />
+    <h2><span>Antonella</span> cumple <strong>1 añito</strong></h2>
+    <img
+      class="sebastian"
+      src="../../../assets/img/sebastian/sebastian1.png"
+      alt="sebastian"
+    />
+  </main>
+  <footer>
+    <img
+      *ngFor="let i of [1, 2, 3, 4, 5]"
+      [src]="'../../../assets/img/fondo/algas' + i + '.png'"
+      alt="algas"
+    />
+  </footer>
+</section>

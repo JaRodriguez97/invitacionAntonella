@@ -1,0 +1,340 @@
+.container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100svh;
+  background-color: #01befe;
+  background-image: url("../../../assets/img/fondo/fondo-mar-videoconferencia_52683-46343.webp");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-size: 100vw 150svh;
+    background-position: top;
+    animation: animatebackground 1s linear both;
+    animation-delay: 1s;
+  }
+
+  @keyframes animatebackground {
+    0% {
+      background-size: 100vw 150svh;
+    }
+    100% {
+      background-size: 100vw 100svh;
+    }
+  }
+}
+
+.container::after {
+  content: "";
+  background-image: url(../../../assets/img/caballitos/caballo1.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  z-index: 2;
+  animation: slide-right 1s linear both;
+  animation-delay: 1.5s;
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(5vw);
+  }
+}
+
+.container::before {
+  content: "";
+  background-image: url(../../../assets/img/Flounder/flounder.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 100px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transform: rotate(290deg);
+  animation: slide-left 1s linear both;
+  animation-delay: 1s;
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(40vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container header::after {
+  content: "";
+  background-image: url(../../../assets/img/tortugas/tortuga1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 40svh;
+  left: -50vw;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  animation: slide-top-right 5s linear both;
+  animation-delay: 2s;
+}
+
+@keyframes slide-top-right {
+  0% {
+    transform: translateY(40svh) translateX(-50vw);
+  }
+  100% {
+    transform: translateY(0svh) translateX(250vw);
+  }
+}
+
+.container header::before {
+  content: "";
+  background-image: url(../../../assets/img/ariel/ariel1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 50svh;
+  left: -100vw;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  animation: slide-top-right1 3s linear both;
+  animation-delay: 2s;
+}
+
+@keyframes slide-top-right1 {
+  0% {
+    transform: translateY(50svh) translateX(-100vw) rotate(60deg);
+  }
+  100% {
+    transform: translateY(-20svh) translateX(250vw) rotate(0deg);
+  }
+}
+
+.container header h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 auto;
+  text-wrap: pretty;
+  width: 50%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  animation: slide-bottom 1s linear both;
+  z-index: 3;
+  position: relative;
+  animation-delay: 1s;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-30svh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+footer img {
+  width: 200px;
+  height: 100%;
+  object-fit: fill;
+  margin-inline: -60px;
+  filter: drop-shadow(0 5px 5px black);
+}
+
+footer img:nth-child(2) {
+  z-index: 3;
+}
+
+footer img:nth-child(3) {
+  z-index: 2;
+}
+
+footer img:nth-child(4) {
+  z-index: 5;
+}
+
+footer img:nth-child(5) {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .shadow-background {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #01befe, transparent);
+    animation: to-bottom 1s linear both;
+    animation-delay: 1s;
+  }
+
+  @keyframes to-bottom {
+    0% {
+      top: -200px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  .container header::before {
+    left: -100vw;
+  }
+
+  .container::before {
+    width: 150px;
+    height: 150px;
+    right: -10px;
+  }
+
+  .container header::after,
+  .container::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(50svh);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(30svh);
+    }
+  }
+
+  main {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 90%;
+    height: fit-content;
+  }
+
+  main h2 {
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-wrap: pretty;
+    animation: blur 1s linear both;
+    animation-delay: 5s;
+    display: flex;
+    flex-direction: column;
+    margin-top: -70px;
+  }
+
+  main h2 span {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: -3px -3px 0 #bd269a, 3px -3px 0 #bd269a, -3px 3px 0 #bd269a,
+      3px 3px 0 #bd269a;
+  }
+
+  main h2 strong {
+    font-size: 1.5em;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    color: #bd269a;
+    font-weight: bold;
+  }
+
+  @keyframes blur {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  main img {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    animation: slide-top 1s linear both;
+    animation-delay: 4s;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  main img.sebastian {
+    width: 150px;
+    height: 150px;
+    left: 80vw;
+    bottom: 35svh;
+    top: auto;
+    animation: slide-left-rotate 1s linear both;
+    animation-delay: 4s;
+    z-index: 5;
+  }
+
+  @keyframes slide-left-rotate {
+    0% {
+      opacity: 0;
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-80vw) translateY(80svh) rotate(360deg);
+    }
+  }
+
+  footer {
+    display: flex;
+    position: absolute;
+    bottom: -300px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    animation: to-top 1s linear both;
+    animation-delay: 1s;
+    overflow: hidden;
+  }
+
+  @keyframes to-top {
+    0% {
+      bottom: -300px;
+    }
+    100% {
+      bottom: -15px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container header h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
