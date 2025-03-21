@@ -120,6 +120,10 @@ main .confirmacion {
   }
 }
 
+main .confirmacion small {
+  font-size: 0.7em;
+}
+
 main .confirmacion .mapa {
   text-decoration: underline;
   color: #000;
@@ -148,4 +152,32 @@ main .confirmacion address section strong {
   font-size: 1em;
   width: 30%;
   line-height: 1em;
+}
+
+.action {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.action .primary {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01befe;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.action .secondary {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #01befe;
+  font-weight: bold;
+  border-radius: 20px;
 }
