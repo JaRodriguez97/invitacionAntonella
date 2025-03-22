@@ -14,7 +14,7 @@ export class PublicService {
     if (isPlatformBrowser(this.platformId)) {
       this.audio = new Audio();
       this.audio.src = '../assets/audio.mpeg';
-      this.audio.volume = 0.5;
+      this.audio.volume = 0.2;
     }
   }
 

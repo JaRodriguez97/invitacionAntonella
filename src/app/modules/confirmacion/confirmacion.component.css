@@ -37,6 +37,7 @@ header img {
 header h2 {
   animation: blur 10s linear both 500ms;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  z-index: 7;
 }
 
 @keyframes blur {
@@ -58,6 +59,11 @@ header h2 {
   }
 }
 
+main {
+  bottom: 0;
+  position: absolute;
+}
+
 main .sebastian {
   animation: slide-left-rotate 1s linear both 3.5s;
   z-index: 5;
@@ -76,9 +82,19 @@ main .sebastian {
   }
 }
 
+@media (max-height: 600px) and (max-width: 500px) {
+  main .flounder {
+    right: -50px;
+  }
+
+  main .sebastian {
+    left: -50px;
+  }
+}
+
 main .flounder {
   animation: slide-right-rotate 1s linear both 2s;
-  z-index: 5;
+  z-index: 6;
   position: relative;
   width: 50%;
 }
@@ -103,7 +119,7 @@ main .confirmacion {
   width: 100%;
   padding: 0 10px;
   position: absolute;
-  bottom: 35svh;
+  bottom: 30svh;
   animation: to-top 1s linear both 10s;
   z-index: 10;
   gap: 5px;

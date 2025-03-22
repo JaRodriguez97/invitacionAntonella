@@ -71,6 +71,7 @@ main h2 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   animation: to-left 1s linear both 1s;
   transition: all 0.3s ease-in-out;
+  z-index: 6;
 }
 
 @keyframes to-left {
@@ -122,7 +123,7 @@ main .datosInfo {
   justify-content: right;
   align-items: flex-end;
   text-align: right;
-  z-index: 3;
+  z-index: 6;
   padding-right: 10px;
 }
 
@@ -158,6 +159,30 @@ main .datosInfo address p {
   text-shadow: 0 5px 5px #000;
 }
 
+@media (max-height: 600px) and (max-width: 500px) {
+  main h2 {
+    font-size: 30px;
+  }
+
+  main .datosInfo {
+    justify-content: center;
+  }
+
+  main .datosInfo address p {
+    margin: 0;
+  }
+
+  main .caballito2 {
+    position: absolute;
+    bottom: 20px;
+    right: -15vw;
+  }
+
+  footer {
+    height: 150px;
+  }
+}
+
 main .datosInfo address span {
   font-size: 1.2em;
   margin-right: 10px;
@@ -166,7 +191,7 @@ main .datosInfo address span {
 main .caballito2 {
   width: 200px;
   height: 200px;
-  animation: to-scape 1s linear both 10s;
+  animation: to-scape 1s linear both 6.5s;
   z-index: 4;
 }
 
